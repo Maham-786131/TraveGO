@@ -81,7 +81,7 @@ header {
    Hero Section
 ========================== */
 .hero {
-  background: url('../images/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg') center/cover no-repeat;
+  background: url('images/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg') center/cover no-repeat;
   color: var(--text-light);
   padding: 4rem 2rem;
   text-align: center;
