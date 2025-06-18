@@ -1,0 +1,211 @@
+/* ==========================
+   Root Variables
+========================== */
+:root {
+  --primary-color: #727794;
+  --secondary-color: #d9b0b0;
+  --background-light: #ffffff;
+  --text-dark: #333;
+  --text-light: #ffffff;
+  --font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==========================
+   Reset & Base
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+/* ==========================
+   Navbar
+========================== */
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.custom-navbar {
+  background-color: var(--primary-color); /* 🔁 Replace with your color */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color:var(--text-light);
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color:var(--secondary-color); /* Optional: highlight on hover/active */
+}
+
+/* Optional: Customize toggler (mobile icon) */
+.custom-navbar .navbar-toggler {
+  border-color: var(--text-light);
+}
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/* ==========================
+   Hero Section
+========================== */
+.hero {
+  background: url('../assets/images/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg') center/cover no-repeat;
+  color: var(--text-light);
+  padding: 4rem 2rem;
+  text-align: center;
+  height: 90vh;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==========================
+   Destinations Section
+========================== */
+.destinations {
+  padding: 2rem;
+  background-color: var(--background-light);
+  text-align: center;
+}
+
+.destination-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  width: 300px;
+  background: var(--background-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+/* ==========================
+   About & Contact Sections
+========================== */
+.about{
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+.contact{
+  background-color: var(--background-light);
+}
+.about, .contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ==========================
+   Contact Form
+========================== */
+.contact-section input,
+.contact-section textarea {
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(76, 154, 146, 0.25); /* Bootstrap blue shade */
+}
+
+
+/* ==========================
+   Footer
+========================== */
+footer {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ==========================
+   Responsive Design
+========================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .destination-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
